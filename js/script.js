@@ -34,6 +34,9 @@ document.querySelector(".EXPERIENCE").addEventListener("click", ()=>{
         top: EXPERIENCE.offsetTop-50,
         behavior: 'smooth'
     })
+    if(window.outerWidth<500){
+        document.querySelector(".menu").style.display='none'
+    }
 })
 
 document.querySelector(".EDUCATION").addEventListener("click", ()=>{
@@ -42,6 +45,9 @@ document.querySelector(".EDUCATION").addEventListener("click", ()=>{
         top: EDUCATION.offsetTop-50,
         behavior: 'smooth'
     })
+    if(window.outerWidth<500){
+        document.querySelector(".menu").style.display='none'
+    }
 })
 
 document.querySelector(".SKILLS").addEventListener("click", ()=>{
@@ -50,6 +56,9 @@ document.querySelector(".SKILLS").addEventListener("click", ()=>{
         top: SKILLS.offsetTop-50,
         behavior: 'smooth'
     })
+    if(window.outerWidth<500){
+        document.querySelector(".menu").style.display='none'
+    }
 })
 
 document.querySelector(".INTERESTS").addEventListener("click", ()=>{
@@ -58,6 +67,9 @@ document.querySelector(".INTERESTS").addEventListener("click", ()=>{
         top: INTERESTS.offsetTop-50,
         behavior: 'smooth'
     })
+    if(window.outerWidth<500){
+        document.querySelector(".menu").style.display='none'
+    }
 })
 
 document.querySelector(".PERSONAL_PROJECTS").addEventListener("click", ()=>{
@@ -66,12 +78,26 @@ document.querySelector(".PERSONAL_PROJECTS").addEventListener("click", ()=>{
         top: PERSONAL_PROJECTS.offsetTop-50,
         behavior: 'smooth'
     })
+    if(window.outerWidth<500){
+        document.querySelector(".menu").style.display='none'
+    }
 })
 
 document.querySelector(".LANGUAGES").addEventListener("click", ()=>{
     document.querySelector(".menu").classList.remove("menu_click")
     window.scrollTo({
         top: LANGUAGES.offsetTop-50,
+        behavior: 'smooth'
+    })
+    if(window.outerWidth<500){
+        document.querySelector(".menu").style.display='none'
+    }
+})
+
+document.querySelector("#href").addEventListener("click", ()=>{
+    document.querySelector(".menu").classList.remove("menu_click")
+    window.scrollTo({
+        top: 0,
         behavior: 'smooth'
     })
 })
@@ -85,7 +111,3 @@ document.querySelector(".close").addEventListener("click", ()=>{
     document.querySelector(".menu").style.display="none"
     document.querySelector(".menu").classList.remove("menu_click")
 })
-
-if(window.outerWidth>500){
-    document.querySelector(".menu").classList.remove("menu_click")
-}
