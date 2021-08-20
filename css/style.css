@@ -1,10 +1,10 @@
 :root{
-    --bg:#0789c1;
-    --bg-border:#04425d;
-    --bg-gridline: linear-gradient(0.25turn,#0789c1, #fff);
+    --bg:#10b7ff;
+    --bg-border:#08648b;
+    --bg-gridline: linear-gradient(0.25turn,#0789c1, #000);
     --tx:#fff;
-    --tx-gridline: linear-gradient(#fff, #046b98);
-    --bg-div-2:#fffbfb;
+    --bg-div-2:#000;
+    --gray:#111;
 }
 
 *{
@@ -42,15 +42,8 @@
 }
 
 img{
-    border: 3px solid var(--bg);
     border-radius: 50%;
-}
-
-img:hover{
-    transition: 1s;
-    border: 3px solid var(--bg-border);
-    transform: scale(1.05);
-    box-shadow: 0px 0px 3px 1px var(--bg-border);
+    box-shadow: 0px 0px 3px 3px var(--bg-border);
 }
 
 .parent>div:nth-child(2) h1{
@@ -64,7 +57,7 @@ img:hover{
 .parent h2{
     color: var(--bg-border);
     font-family: gabriola, serif;
-    text-shadow: 1px 1px var(--bg);
+    text-shadow: 1px 1px var(--tx);
     padding-left: 20px;
 }
 
@@ -73,7 +66,16 @@ img:hover{
 }
 
 .parent p,.parent li, .parent h4, .parent span{
-    text-shadow: 1px 1px var(--bg);
+    text-shadow: .75px .5px .5px var(--bg);
+}
+
+.parent h3{
+    color: var(--bg-border);
+    text-shadow: .75px .75px .5px var(--gray);
+}
+
+.menu h2, .menu span, .menu a{
+    color: var(--tx);
 }
 
 .div-mas-1>div{
@@ -109,13 +111,14 @@ img:hover{
 
 .a1:hover{
     background-color: var(--bg-border);
+    border: 1px groove var(--bg);
     color: var(--tx);
     border-bottom:2px solid var(--tx);
     box-shadow: 0 0 3px 1px var(--tx);
 }
 
 .a2{
-    background-color: var(--bg-border);
+    background-color: var(--gray);
     color: var(--tx);
     border-bottom:2px solid var(--tx);
     box-shadow: 0 0 3px 1px var(--tx);
@@ -126,13 +129,15 @@ img:hover{
     text-align: left;
     box-shadow: 0px 0px 2px 1px var(--bg-border);
     padding: 20px;
-    background-color: white;
+    background-color:var(--tx);
     margin: auto;
     height: auto;
 }
 
 #EXPERIENCE:hover, #EDUCATION:hover, #SKILLS:hover, #INTERESTS:hover, #LANGUAGES:hover, #PERSONAL_PROJECTS:hover{
     box-shadow: 0px 0px 3px 3px var(--bg-border);
+    transform: scale(1.02);
+    transition: 1s;
 }
 
 #EXPERIENCE>div>div, #EDUCATION>div>div, #LANGUAGES>div>div, #PERSONAL_PROJECTS>div>div{
@@ -157,8 +162,8 @@ img:hover{
 
 #SKILLS span:hover{
     transition: 1s;
-    background-color: var(--tx);
-    color: var(--bg-border);
+    background-color: var(--gray);
+    /* color: var(--bg-border); */
     box-shadow: 0px 0px 3px 3px var(--bg-border);
 }
 
@@ -166,7 +171,7 @@ img:hover{
     transition: 1s;
     background-color: var(--bg-border);
     color: var(--tx);
-    box-shadow: 0px 0px 3px 3px var(--tx);
+    box-shadow: 0px 0px 3px 3px var(--gray);
 }
 
 header{
@@ -183,5 +188,27 @@ header{
 }
 
 .close{
+    width: 50px;
+    height: 50px;
     display: none;
+}
+
+#btn{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 26px;
+}
+
+#btn button{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+#btn i{
+    color: var(--tx);
+    font-size: 35px;
+    cursor: pointer;
+}
+#btn i:hover{
+    text-shadow: 0px 0px 5px var(--bg);
 }
